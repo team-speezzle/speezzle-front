@@ -1,11 +1,15 @@
 import "../styles/header.css";
 import back_icon from "../assets/back_icon.svg";
 
-const Header = ({text }) => {
+import { useNavigate } from "react-router-dom";
+
+const Header = ({ title }) => {
+  const navigate = useNavigate();
+
   return (
     <header>
-      <img src={back_icon} alt="back" />
-      <h4>{text}</h4>
+      <img src={back_icon} alt="back" onClick={() => navigate(-1)} />
+      <h4>{title}</h4>
     </header>
   );
 };

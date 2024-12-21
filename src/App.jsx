@@ -1,9 +1,13 @@
-import Share from "./pages/share";
+
+import Router from './components/Router'
+
 
 function App() {
   return (
     <>
-      <Share />
+
+      <Router />
+
     </>
   );
 }

@@ -1,0 +1,84 @@
+.signup {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width : 100%;
+    height : calc(100vh - 70px);
+    background-color: #EFEBE9;
+    padding : 10% 6% 0 6%;
+}
+
+.signup > .inputBox {
+    width : 100%;
+}
+
+.signup > .inputBox > h4 {
+    font-weight: 400;
+    color : #595F72;
+    margin-bottom : 10px;
+}
+
+.signup > .inputBox > p {
+    padding-left: 6px;
+    font-size : 12px;
+    font-weight: 400;
+    color : #9CA3AF;
+    margin-top : 2px;
+}
+
+.signup > .inputBox > input {
+    box-sizing : border-box;
+    width : 100%;
+    border : none;
+    padding-left : 10px;
+    border : 1px solid #D9D9D9;
+    height : 46px;
+    border-radius: 8px;
+    font-size : 16px;
+    margin-bottom : 8px;
+}
+
+.signup > .inputBox > input::placeholder {
+    color : #A5ADBD;
+}
+
+.signup > span {
+    height : 26%;
+}
+
+.inputBox > .email {
+    display : flex;
+    flex-direction: row;
+    gap : 8px;
+    align-items: center;
+}
+
+.inputBox > .email > input {
+    box-sizing : border-box;
+    width : 60%;
+    border : none;
+    padding-left : 10px;
+    border : 1px solid #D9D9D9;
+    height : 46px;
+    border-radius: 8px;
+    font-size : 16px;
+    margin-bottom : 8px;
+}
+
+.inputBox > .email > input::placeholder {
+    color : #A5ADBD;
+}
+
+.inputBox > .email > select {
+    color : #A5ADBD;
+    font-size : 16px;
+    box-sizing : border-box;
+    width : 40%;
+    border : none;
+    padding-left : 10px;
+    border : 1px solid #D9D9D9;
+    height : 46px;
+    border-radius: 8px;
+    font-size : 16px;
+    margin-bottom : 8px;
+}
