@@ -19,7 +19,7 @@ const Router = () => {
         <Route path="/write/:id" element={<Write />} />
         <Route path="/invite/:id" element={<Invite />} />
         <Route path="/result" element={<Result />} />
-        <Route path="/share" element={<Share />} />
+        <Route path="/share/:id" element={<Share />} />
       </Routes>
     </BrowserRouter>
   );

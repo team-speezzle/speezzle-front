@@ -11,8 +11,50 @@ import puzzle9 from "../assets/puzzle/9.svg";
 import puzzle10 from "../assets/puzzle/10.svg";
 import puzzle11 from "../assets/puzzle/11.svg";
 import puzzle12 from "../assets/puzzle/12.svg";
+import ReadLetter from '../components/ReadLetter'
+import { useState, useEffect } from "react";
+import { useParams} from "react-router-dom";
+import axios from "axios";
 
 const Share = () => {
+  const [pices, setPices] = useState([])
+  const [pic, setPic] = useState("")
+  const [auth, setAuth] = useState("")
+  const [letter, setLetter] = useState("")
+  const [see, setSee] = useState(false)
+
+  const param = useParams();
+  const url = import.meta.env.VITE_API_URL
+
+  const pieceImgs = [puzzle1, puzzle4, puzzle7, puzzle10, puzzle2, puzzle5, puzzle8, puzzle11, puzzle3, puzzle9, puzzle6, puzzle12];
+
+  const GetLetters = async () => {
+    try {
+      const response = await axios.get(`${url}/puzzles/${param.id}`)
+
+      setPices(response.data.pieces)
+      setPic(response.data.puzzlePicture)
+    } catch(error) {
+      console.error("Error", error)
+    }
+  }
+
+  const GetLetter = async (id) => {
+    try {
+      const response = await axios.get(`${url}/pieces/${id}`)
+
+      setAuth(response.data.author)
+      setLetter(response.data.letter)
+      setSee(true)
+    } catch(error) {
+      console.error("Error", error)
+    }
+  }
+
+  useEffect(() => {
+    GetLetters()
+  },[])
+
   const { title, introduce1 } = {
     title: "권민재님 퍼즐을 확인해보세요",
     introduce1: "12명이 편지를 작성했어요!",
@@ -43,21 +85,16 @@ const Share = () => {
         <span className="title">{title}</span>
         <span className="content">{introduce1}</span>
       </span>
-      <div className="puzzlelayout">
-        <img src={puzzle1} alt="img" className="img1" />
-        <img src={puzzle4} alt="img" className="img2" />
-        <img src={puzzle7} alt="img" className="img3" />
-        <img src={puzzle10} alt="img" className="img4" />
-        <img src={puzzle2} alt="img" className="img5" />
-        <img src={puzzle5} alt="img" className="img6" />
-        <img src={puzzle8} alt="img" className="img7" />
-        <img src={puzzle11} alt="img" className="img8" />
-        <img src={puzzle3} alt="img" className="img9" />
-        <img src={puzzle9} alt="img" className="img10" />
-        <img src={puzzle6} alt="img" className="img11" />
-        <img src={puzzle12} alt="img" className="img12" />
+      <div className="puzzlelayout" style={{background: `url(${pic}) no-repeat center`}}>
+        {
+          pices.map((item, idx)=>(
+            <img src={pieceImgs[idx]} alt="img" className={`img${idx+1}`} key={item.id} onClick={() => GetLetter(item.id)}/>
+          ))
+        }
+        
       </div>
       <button onClick={handleShare}>내 퍼즐 공유하기</button>
+      {see === true ? <ReadLetter author={auth} letter={letter} />:<></>}
     </div>
   );
 };

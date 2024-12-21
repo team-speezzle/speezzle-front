@@ -26,7 +26,7 @@
 }
 
 .puzzlelayout {
-  position: relative;
+  display: flex;
   width: 90%;
   height: 244px; /* 전체 퍼즐 높이 */
 }
@@ -37,101 +37,101 @@ img {
 }
 
 .img1 {
-  position: fixed;
   top: 252px;
   left: 36px;
   width: 97px;
   height: 99px;
+  opacity: 0.1;
 }
 .img2 {
-  position: fixed;
   top: 252px;
   left: 113px;
   width: 99px;
   height: 82px;
+  opacity : 0;
 }
 .img3 {
-  position: fixed;
   top: 252px;
   left: 193px;
   width: 84px;
   height: 99px;
+  opacity : 0;
 }
 .img4 {
-  position: fixed;
   top: 252px;
   left: 258px;
   width: 97px;
   height: 82px;
+  opacity : 0;
 }
 
 .img5 {
-  position: fixed;
   top: 334px;
   left: 36px;
   width: 82px;
   height: 100px;
+  opacity : 0;
 }
 .img6 {
-  position: fixed;
   top: 317px;
   left: 98px;
   width: 100px;
   height: 102px;
+  opacity : 0;
 }
 .img7 {
-  position: fixed;
   top: 334px;
   left: 177px;
   width: 98px;
   height: 100px;
+  opacity : 0;
 }
 .img8 {
-  position: fixed;
   top: 317px;
   left: 258px;
   width: 97px;
   height: 102px;
+  opacity : 0;
 }
 
 .img9 {
-  position: fixed;
   top: 414px;
   left: 35px;
   width: 97px;
   height: 84px;
+  opacity : 0;
 }
 
 .img10 {
-  position: fixed;
   top: 399px;
   left: 113px;
   width: 99px;
   height: 100px;
+  opacity : 0;
 }
 
 .img10 {
-  position: fixed;
   top: 399px;
   left: 113px;
   width: 99px;
   height: 100px;
+  opacity : 0;
 }
 
 .img11 {
-  position: fixed;
   top: 414px;
   left: 192px;
   width: 99px;
   height: 85px;
+  opacity : 0;
 }
 
 .img12 {
-  position: fixed;
   top: 399px;
   left: 275px;
   width: 80px;
   height: 100px;
+  opacity : 0;
 }
 
 button {
