@@ -1,6 +1,6 @@
 import '../styles/readLetter.css'
 
-const ReadLetter = ({author, letter}) => {
+const ReadLetter = ({author, letter, setSee}) => {
     
 
     return (
@@ -12,7 +12,7 @@ const ReadLetter = ({author, letter}) => {
                     {letter}
                 </div>
             </div>
-            <button className='exit'>닫기</button>
+            <button className='exit' onClick={() => setSee(false)}>닫기</button>
         </div>
     )
 }
