@@ -8,10 +8,6 @@
   justify-content: center;
 }
 
-.memo {
-  width: 80%;
-  margin-bottom: 330px;
-}
 
 .title {
   display: flex;
@@ -26,72 +22,74 @@
 }
 
 .puzzlelayout {
-  display: flex;
-  width: 90%;
-  height: 300px;
+  position: relative;
+  width: 320px;
+  height: 280px;
+  background-size: cover;
 }
 
 img {
-  position: absolute; /* 각 이미지를 절대 위치로 배치 */
+  position: absolute;
   box-shadow: none; /* 그림자 제거 */
 }
 
 .img1 {
-  top: 252px;
-  left: 36px;
+  top: 0;
+  left: 0;
   width: 97px;
   height: 99px;
-  opacity: 0.1;
+  opacity: 0.3;
 }
 .img2 {
-  top: 252px;
-  left: 113px;
+  top: 0px;
+  left: 80px;
   width: 99px;
   height: 82px;
-  opacity: 0;
+  opacity: 0.3;
 }
 .img3 {
-  top: 252px;
-  left: 193px;
+  top: 0px;
+  left: 160px;
   width: 84px;
   height: 99px;
-  opacity: 0;
+  opacity: 0.3;
 }
 .img4 {
-  top: 252px;
-  left: 258px;
+  top: 0px;
+  left: 224px;
   width: 97px;
   height: 82px;
-  opacity: 0;
+  opacity: 0.3;
 }
 
 .img5 {
-  top: 334px;
-  left: 36px;
+  top: 80px;
+  left: 0px;
   width: 82px;
   height: 100px;
-  opacity: 0;
+  opacity: 0.3;
 }
 .img6 {
-  top: 317px;
-  left: 98px;
+  top: 65px;
+  left: 65px;
   width: 100px;
   height: 102px;
-  opacity: 0;
+  opacity: 0.3;
 }
+
 .img7 {
-  top: 334px;
-  left: 177px;
+  top: 80px;
+  left: 145px;
   width: 98px;
   height: 100px;
-  opacity: 0;
+  opacity: 0.3;
 }
 .img8 {
-  top: 317px;
+  top: 20px;
   left: 258px;
   width: 97px;
   height: 102px;
-  opacity: 0;
+  opacity: 0.3;
 }
 
 .img9 {
@@ -99,7 +97,7 @@ img {
   left: 35px;
   width: 97px;
   height: 84px;
-  opacity: 0;
+  opacity: 0.1;
 }
 
 .img10 {
@@ -107,15 +105,7 @@ img {
   left: 113px;
   width: 99px;
   height: 100px;
-  opacity: 0;
-}
-
-.img10 {
-  top: 399px;
-  left: 113px;
-  width: 99px;
-  height: 100px;
-  opacity: 0;
+  opacity: 0.1;
 }
 
 .img11 {
@@ -123,7 +113,7 @@ img {
   left: 192px;
   width: 99px;
   height: 85px;
-  opacity: 0;
+  opacity: 0.1;
 }
 
 .img12 {
@@ -131,9 +121,21 @@ img {
   left: 275px;
   width: 80px;
   height: 100px;
-  opacity: 0;
+  opacity: 0.1;
 }
 
 .button_1 {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: fill;
+  object-position: center;
 }

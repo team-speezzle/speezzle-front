@@ -12,9 +12,10 @@ import puzzle10 from "../assets/puzzle/10.svg";
 import puzzle11 from "../assets/puzzle/11.svg";
 import puzzle12 from "../assets/puzzle/12.svg";
 import ReadLetter from "../components/ReadLetter";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import html2canvas from "html2canvas";
 
 const Share = () => {
   const [pices, setPices] = useState([]);
@@ -22,6 +23,25 @@ const Share = () => {
   const [auth, setAuth] = useState("");
   const [letter, setLetter] = useState("");
   const [see, setSee] = useState(false);
+
+  const captureRef = useRef(null);
+
+  const onCapture = () => {
+    if (captureRef.current) {
+      html2canvas(captureRef.current).then((canvas) => {
+        onSaveAs(canvas.toDataURL("image/png"), "image-download.png");
+      });
+    }
+  };
+
+  const onSaveAs = (uri, filename) => {
+    const link = document.createElement("a");
+    document.body.appendChild(link);
+    link.href = uri;
+    link.download = filename;
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const param = useParams();
   const url = import.meta.env.VITE_API_URL;
@@ -73,24 +93,24 @@ const Share = () => {
     introduce1: "12명이 편지를 작성했어요!",
   };
 
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator
-        .share({
-          title: "퍼즐 공유",
-          text: `${title}\n${introduce1}`,
-          url: "http://localhost:5173/",
-        })
-        .then(() => {
-          console.log("공유 성공!");
-        })
-        .catch((error) => {
-          console.error("공유 실패:", error);
-        });
-    } else {
-      alert("공유 기능을 지원하지 않는 브라우저입니다.");
-    }
-  };
+  // const handleShare = () => {
+  //   if (navigator.share) {
+  //     navigator
+  //       .share({
+  //         title: "퍼즐 공유",
+  //         text: `${title}\n${introduce1}`,
+  //         url: "http://localhost:5173/",
+  //       })
+  //       .then(() => {
+  //         console.log("공유 성공!");
+  //       })
+  //       .catch((error) => {
+  //         console.error("공유 실패:", error);
+  //       });
+  //   } else {
+  //     alert("공유 기능을 지원하지 않는 브라우저입니다.");
+  //   }
+  // };
 
   return (
     <div className="Layout">
@@ -98,23 +118,30 @@ const Share = () => {
         <span className="title">{title}</span>
         <span className="content">{introduce1}</span>
       </span>
-      <div
-        className="puzzlelayout"
-        style={{ background: `url(${pic}) no-repeat center` }}
-      >
-        {pices.map((item, idx) => (
-          <img
-            src={pieceImgs[idx]}
-            alt="img"
-            className={`img${idx + 1}`}
-            key={item.id}
-            onClick={() => GetLetter(item.id)}
-          />
-        ))}
-      </div>
-      <button onClick={handleShare} className="button_1">내 퍼즐 공유하기</button>
-      {see === true ? <ReadLetter author={auth} letter={letter} setSee={setSee}/>:<></>}
-
+      <div className="Capture" ref={captureRef}>
+        <div
+          className="puzzlelayout"
+        >
+          <img className="backgroundImg" src={pic}/>
+          {pices.map((item, idx) => (
+            <img
+              src={pieceImgs[idx]}
+              alt="img"
+              className={`img${idx + 1}`}
+              key={item.id}
+              onClick={() => GetLetter(item.id)}
+            />
+          ))}
+        </div>
+      </div>``
+      <button onClick={onCapture} className="button_1">
+        내 퍼즐 공유하기
+      </button>
+      {see === true ? (
+        <ReadLetter author={auth} letter={letter} setSee={setSee} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
