@@ -93,7 +93,7 @@ const Share = () => {
         }
         
       </div>
-      <button onClick={handleShare}>내 퍼즐 공유하기</button>
+      <button onClick={handleShare} className="button_1">내 퍼즐 공유하기</button>
       {see === true ? <ReadLetter author={auth} letter={letter} />:<></>}
     </div>
   );

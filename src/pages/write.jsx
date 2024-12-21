@@ -20,7 +20,7 @@ const Write = () => {
   const submit = async () => {
     if(loading) return;
     setLoading(true);
-    const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/pieces/${param.id}`);
+    const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/pieces/${param.id}`, letterData);
     if(data){
       setLoading(false);
       navigate('/result');
