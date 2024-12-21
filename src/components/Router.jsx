@@ -5,7 +5,8 @@ import MakingPuzzle from "../pages/MakingPuzzle";
 import SignUp from "../pages/SignUp";
 import Write from "../pages/write";
 import Result from "../pages/result";
-import Invite from '../pages/invite'
+import Invite from "../pages/invite";
+import Share from "../pages/share";
 
 const Router = () => {
   return (
@@ -18,6 +19,7 @@ const Router = () => {
         <Route path="/write/:id" element={<Write />} />
         <Route path="/invite/:id" element={<Invite />} />
         <Route path="/result" element={<Result />} />
+        <Route path="/share" element={<Share />} />
       </Routes>
     </BrowserRouter>
   );

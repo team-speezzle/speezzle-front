@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
 import "../styles/makePuzzle.css";
 import Header from "../components/Header";

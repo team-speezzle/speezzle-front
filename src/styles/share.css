@@ -14,7 +14,6 @@
 }
 
 .title {
-
   display: flex;
   color: #000;
   font-size: 24px;
@@ -30,13 +29,13 @@
   position: relative;
   width: 90%;
   height: 244px; /* 전체 퍼즐 높이 */
-
 }
 
 img {
   position: absolute; /* 각 이미지를 절대 위치로 배치 */
   box-shadow: none; /* 그림자 제거 */
 }
+
 .img1 {
   position: fixed;
   top: 252px;

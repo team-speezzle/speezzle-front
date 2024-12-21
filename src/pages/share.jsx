@@ -11,6 +11,7 @@ import puzzle9 from "../assets/puzzle/9.svg";
 import puzzle10 from "../assets/puzzle/10.svg";
 import puzzle11 from "../assets/puzzle/11.svg";
 import puzzle12 from "../assets/puzzle/12.svg";
+
 const Share = () => {
   const { title, introduce1 } = {
     title: "권민재님 퍼즐을 확인해보세요",
@@ -23,7 +24,7 @@ const Share = () => {
         .share({
           title: "퍼즐 공유",
           text: `${title}\n${introduce1}`,
-          url: "https://localhost:5173/",
+          url: "http://localhost:5173/",
         })
         .then(() => {
           console.log("공유 성공!");
