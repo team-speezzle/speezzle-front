@@ -11,49 +11,62 @@ import puzzle9 from "../assets/puzzle/9.svg";
 import puzzle10 from "../assets/puzzle/10.svg";
 import puzzle11 from "../assets/puzzle/11.svg";
 import puzzle12 from "../assets/puzzle/12.svg";
-import ReadLetter from '../components/ReadLetter'
+import ReadLetter from "../components/ReadLetter";
 import { useState, useEffect } from "react";
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const Share = () => {
-  const [pices, setPices] = useState([])
-  const [pic, setPic] = useState("")
-  const [auth, setAuth] = useState("")
-  const [letter, setLetter] = useState("")
-  const [see, setSee] = useState(false)
+  const [pices, setPices] = useState([]);
+  const [pic, setPic] = useState("");
+  const [auth, setAuth] = useState("");
+  const [letter, setLetter] = useState("");
+  const [see, setSee] = useState(false);
 
   const param = useParams();
-  const url = import.meta.env.VITE_API_URL
+  const url = import.meta.env.VITE_API_URL;
 
-  const pieceImgs = [puzzle1, puzzle4, puzzle7, puzzle10, puzzle2, puzzle5, puzzle8, puzzle11, puzzle3, puzzle9, puzzle6, puzzle12];
+  const pieceImgs = [
+    puzzle1,
+    puzzle4,
+    puzzle7,
+    puzzle10,
+    puzzle2,
+    puzzle5,
+    puzzle8,
+    puzzle11,
+    puzzle3,
+    puzzle9,
+    puzzle6,
+    puzzle12,
+  ];
 
   const GetLetters = async () => {
     try {
-      const response = await axios.get(`${url}/puzzles/${param.id}`)
+      const response = await axios.get(`${url}/puzzles/${param.id}`);
 
-      setPices(response.data.pieces)
-      setPic(response.data.puzzlePicture)
-    } catch(error) {
-      console.error("Error", error)
+      setPices(response.data.pieces);
+      setPic(response.data.puzzlePicture);
+    } catch (error) {
+      console.error("Error", error);
     }
-  }
+  };
 
   const GetLetter = async (id) => {
     try {
-      const response = await axios.get(`${url}/pieces/${id}`)
+      const response = await axios.get(`${url}/pieces/${id}`);
 
-      setAuth(response.data.author)
-      setLetter(response.data.letter)
-      setSee(true)
-    } catch(error) {
-      console.error("Error", error)
+      setAuth(response.data.author);
+      setLetter(response.data.letter);
+      setSee(true);
+    } catch (error) {
+      console.error("Error", error);
     }
-  }
+  };
 
   useEffect(() => {
-    GetLetters()
-  },[])
+    GetLetters();
+  }, []);
 
   const { title, introduce1 } = {
     title: "권민재님 퍼즐을 확인해보세요",
@@ -85,16 +98,23 @@ const Share = () => {
         <span className="title">{title}</span>
         <span className="content">{introduce1}</span>
       </span>
-      <div className="puzzlelayout" style={{background: `url(${pic}) no-repeat center`}}>
-        {
-          pices.map((item, idx)=>(
-            <img src={pieceImgs[idx]} alt="img" className={`img${idx+1}`} key={item.id} onClick={() => GetLetter(item.id)}/>
-          ))
-        }
-        
+      <div
+        className="puzzlelayout"
+        style={{ background: `url(${pic}) no-repeat center` }}
+      >
+        {pices.map((item, idx) => (
+          <img
+            src={pieceImgs[idx]}
+            alt="img"
+            className={`img${idx + 1}`}
+            key={item.id}
+            onClick={() => GetLetter(item.id)}
+          />
+        ))}
       </div>
       <button onClick={handleShare} className="button_1">내 퍼즐 공유하기</button>
       {see === true ? <ReadLetter author={auth} letter={letter} setSee={setSee}/>:<></>}
+
     </div>
   );
 };
