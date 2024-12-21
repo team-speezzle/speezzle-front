@@ -31,8 +31,18 @@
 }
 
 .gray-text {
-  font-size: 10px;
+  font-size: 12px;
   color: #ccc;
   width: 100%;
   text-align: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.button-wrap {
+  width: 100%;
+  padding: 32px 12px;
+  box-sizing: border-box;
 }
