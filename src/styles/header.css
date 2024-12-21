@@ -1,9 +1,22 @@
 header {
+    display : flex;
+    position: relative;
     width : 100%;
-    height : 20%;
+    height : 70px;
     background-color : #EFEBE9;
+    border-bottom : 1px solid #D1D5DB;
+    align-items: center;
+    justify-content: center;
+}
+
+header > img {
+    position: absolute;
+    width : 30px;
+    height : 30px;
+    left : 16px;
 }
 
 header > h4 {
+    margin : 0 auto;
     color : black;
 }
