@@ -1,10 +1,7 @@
-import '../styles/button.css'
+import "../styles/button.css";
 
-const Button = ({text}) => {
+const Button = ({ text }) => {
+  return <button>{text}</button>;
+};
 
-    return (
-        <button>{text}</button>
-    )
-}
-
-export default Button
+export default Button;

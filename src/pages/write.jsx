@@ -1,10 +1,11 @@
 import "../styles/write.css";
-// import Header from "../components/Header";
+import Header from "../components/Header";
+import Button from "../components/Button";
 
 const Write = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header text="윤뎌 윤뎌" />
       <div className="Layout">
         <span className="name">To.권민재님</span>
         <textarea
@@ -12,7 +13,7 @@ const Write = () => {
           placeholder="메세지를 입력해주세요.(500자 이내)"
           maxLength={500}
         ></textarea>
-        <button className="button">보내기</button>
+        <Button text="보내기"></Button>
       </div>
     </>
   );

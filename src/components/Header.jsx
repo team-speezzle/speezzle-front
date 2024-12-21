@@ -1,13 +1,13 @@
-import '../styles/header.css'
-import back_icon from '../assets/back_icon.svg'
+import "../styles/header.css";
+import back_icon from "../assets/back_icon.svg";
 
-const Header = () => {
-    return (
-        <header>
-            <img src={back_icon} alt="back"/>
-            <h4>로그인</h4>
-        </header>
-    )
-}
+const Header = ({text }) => {
+  return (
+    <header>
+      <img src={back_icon} alt="back" />
+      <h4>{text}</h4>
+    </header>
+  );
+};
 
-export default Header
+export default Header;

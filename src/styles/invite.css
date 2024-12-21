@@ -15,16 +15,25 @@
   margin-bottom: 12px;
   margin-right: auto;
   padding: 0 4%;
+  margin-top: 32px;
 }
 
 .share {
-  padding: 0 2% 0 2%;
   display: flex;
   width: 90%;
   height: 40px;
-  justify-content: space-between;
   background-color: #fff;
   font-size: 20px;
   border-radius: 8px;
   align-items: center;
+}
+
+.URL {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
 }

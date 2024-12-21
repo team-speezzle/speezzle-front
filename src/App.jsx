@@ -1,10 +1,9 @@
-import Login from './pages/Login'
+import Share from "./pages/share";
 
 function App() {
-
   return (
     <>
-      <Login />
+      <Share />
     </>
   );
 }
