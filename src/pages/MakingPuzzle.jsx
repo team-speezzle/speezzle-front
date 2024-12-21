@@ -17,6 +17,7 @@ const MakingPuzzle = () => {
     return (
         <div className='makingGroup-container'>
             <img src={squirrel2} alt='squirrel2'/>
+            <span />
             <Button text='퍼즐생성하기' onClick={() => navigate('/make-puzzle')}/>
         </div>
     )

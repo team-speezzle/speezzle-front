@@ -132,9 +132,7 @@ const MakePuzzle = () => {
         />
       </div>
       <div className="spacer"></div>
-      <div className="button-wrap">
-        <Button text="생성하기" onClick={submit} />
-      </div>
+      <Button text="생성하기" onClick={submit} />
     </div>
   );
 };

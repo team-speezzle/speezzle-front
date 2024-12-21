@@ -4,6 +4,7 @@
   background-color: #EFEBE9;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .main {
@@ -43,8 +44,8 @@
 
 .button-wrap {
   width: 100%;
-  padding: 32px 12px;
   box-sizing: border-box;
+  
 }
 
 .margin {
