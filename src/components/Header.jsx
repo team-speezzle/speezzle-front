@@ -1,11 +1,11 @@
 import '../styles/header.css'
 import back_icon from '../assets/back_icon.svg'
 
-const Header = () => {
+const Header = ({ title }) => {
     return (
         <header>
             <img src={back_icon} alt="back"/>
-            <h4>로그인</h4>
+            <h4>{ title }</h4>
         </header>
     )
 }
