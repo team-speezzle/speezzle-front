@@ -1,12 +1,12 @@
 import "../styles/write.css";
-// import Header from "../components/Header";
+import Header from "../components/Header";
 
 const Write = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="Layout">
-        <span className="name">To.권민재님</span>
+        <span className="name">To. 권민재님</span>
         <textarea
           className="write"
           placeholder="메세지를 입력해주세요.(500자 이내)"
