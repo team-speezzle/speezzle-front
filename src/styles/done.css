@@ -1,38 +1,32 @@
 .Layout {
   display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100vh;
   background-color: #efebe9;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   gap: 10px;
-  padding: 0;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 20px;
+  text-align: center;
 }
 
 .send {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #000;
   font-family: Pretendard;
-  font-size: 20px;
+  font-size: 8px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-}
-
-.gray-text {
-  font-size: 12px;
-  color: #ccc;
-}
-
-.link-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  background-color: #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .link {
