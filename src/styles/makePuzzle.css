@@ -46,3 +46,7 @@
   padding: 32px 12px;
   box-sizing: border-box;
 }
+
+.margin {
+  height: 12px;
+}

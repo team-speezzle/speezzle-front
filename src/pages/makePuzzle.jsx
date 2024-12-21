@@ -14,6 +14,7 @@ const MakePuzzle = () => {
     sendDate: "",
     puzzlePicture: "",
   });
+  const [time, setTime] = useState("00:00"); // 시간 추가
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -48,15 +49,40 @@ const MakePuzzle = () => {
     setPuzzleData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleTimeChange = (e) => {
+    setTime(e.target.value);
+  };
+
   const submit = async () => {
-    if(loading) return;
+    if (loading) return;
     setLoading(true);
-    const { data } = await customAxios.post(`${import.meta.env.VITE_API_URL}/puzzles`, puzzleData);
-    if (data) {
+
+    const { title, email, sendDate, puzzlePicture } = puzzleData;
+
+    // sendDate와 time을 결합하여 LocalDateTime 형식으로 변환
+    const formattedDate = `${sendDate}T${time}:00`;
+
+    const payload = {
+      title,
+      email,
+      sendDate: formattedDate,
+      puzzlePicture,
+    };
+
+    try {
+      const { data } = await customAxios.post(
+        `${import.meta.env.VITE_API_URL}/puzzles`,
+        payload
+      );
+      if (data) {
+        setLoading(false);
+        navigate("/done");
+      }
+    } catch (error) {
+      console.error("Error submitting puzzle:", error);
       setLoading(false);
-      navigate('/done');
     }
-  }
+  };
 
   return (
     <div className="make-puzzle">
@@ -91,6 +117,13 @@ const MakePuzzle = () => {
           onChange={handleData}
           value={puzzleData.sendDate}
         />
+        <div className="margin"></div>
+        <input
+          type="time"
+          className="input"
+          onChange={handleTimeChange}
+          value={time}
+        />
         <p>사진 선택</p>
         <input
           type="file"
@@ -101,7 +134,7 @@ const MakePuzzle = () => {
       </div>
       <div className="spacer"></div>
       <div className="button-wrap">
-        <Button text="생성하기" onClick={handleFile} />
+        <Button text="생성하기" onClick={submit} />
       </div>
     </div>
   );
