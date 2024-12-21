@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/done.css";
 import { Link, useParams } from "react-router-dom";
 

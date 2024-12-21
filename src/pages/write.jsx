@@ -29,7 +29,6 @@ const Write = () => {
 
   return (
     <>
-
       <Header title="편지쓰기" />
       <div className="Layout">
         <input
