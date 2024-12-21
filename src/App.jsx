@@ -1,4 +1,3 @@
-import {  } from 'react'
 import Login from './pages/Login'
 
 function App() {
@@ -7,7 +6,7 @@ function App() {
     <>
       <Login />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
