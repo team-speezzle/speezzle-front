@@ -1,0 +1,16 @@
+.makingGroup-container {
+    box-sizing: border-box;
+    width : 100%;
+    height : 100vh;
+    background-color: #EFEBE9;
+    display : flex;
+    flex-direction :column;
+    align-items: center;
+    padding: 0 6% 0 6%;
+}
+
+.makingGroup-container > img {
+    width : 84%;
+    height : 84%;
+    margin-bottom: -120px;
+}

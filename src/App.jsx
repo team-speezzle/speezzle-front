@@ -1,9 +1,10 @@
-import Invite from "./pages/invite";
+import Login from './pages/Login'
 
 function App() {
+
   return (
     <>
-      <Invite />
+      <Login />
     </>
   );
 }
