@@ -59,7 +59,6 @@ const MakePuzzle = () => {
 
     const { title, email, sendDate, puzzlePicture } = puzzleData;
 
-    // sendDate와 time을 결합하여 LocalDateTime 형식으로 변환
     const formattedDate = `${sendDate}T${time}:00`;
 
     const payload = {
@@ -76,7 +75,7 @@ const MakePuzzle = () => {
       );
       if (data) {
         setLoading(false);
-        navigate("/done");
+        navigate(`/done/${data.id}`);
       }
     } catch (error) {
       console.error("Error submitting puzzle:", error);
