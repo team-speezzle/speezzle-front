@@ -1,8 +1,5 @@
 import "../styles/button.css";
 
-
-export default Button;
-
 const Button = ({text, onClick}) => {
 
     return (
@@ -10,5 +7,5 @@ const Button = ({text, onClick}) => {
     )
 }
 
-export default Button
+export default Button;
 
