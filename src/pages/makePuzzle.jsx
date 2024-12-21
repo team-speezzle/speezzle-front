@@ -75,7 +75,7 @@ const MakePuzzle = () => {
       );
       if (data) {
         setLoading(false);
-        navigate(`/done/${data.id}`);
+        navigate(`/invite/${data.id}`);
       }
     } catch (error) {
       console.error("Error submitting puzzle:", error);
