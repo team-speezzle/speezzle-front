@@ -1,9 +1,9 @@
 import '../styles/button.css'
 
-const Button = () => {
+const Button = ({text}) => {
 
     return (
-        <button>로그인하기</button>
+        <button>{text}</button>
     )
 }
 

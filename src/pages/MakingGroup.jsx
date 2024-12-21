@@ -6,7 +6,7 @@ const MakingGroup = () => {
     return (
         <div className='makingGroup-container'>
             <img src={squirrel2} alt='squirrel2'/>
-            <Button />
+            <Button text='퍼즐생성하기'/>
         </div>
     )
 }

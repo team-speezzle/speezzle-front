@@ -15,7 +15,7 @@ const Login = () => {
                     <input type="text" placeholder='아이디'/>
                     <input type="text" placeholder='비밀번호'/>
                 </div>
-                <Button />
+                <Button text='로그인하기'/>
                 <img src={squirrel_pic} alt="squirrel"/>
             </main>
         </>
