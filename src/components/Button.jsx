@@ -1,4 +1,7 @@
-import '../styles/button.css'
+import "../styles/button.css";
+
+
+export default Button;
 
 const Button = ({text, onClick}) => {
 
@@ -8,3 +11,4 @@ const Button = ({text, onClick}) => {
 }
 
 export default Button
+

@@ -1,8 +1,10 @@
 import "../styles/write.css";
 import Header from "../components/Header";
+
 import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+
 
 const Write = () => {
   const param = useParams();
@@ -27,6 +29,7 @@ const Write = () => {
 
   return (
     <>
+
       <Header title="편지쓰기" />
       <div className="Layout">
         <input
@@ -45,6 +48,7 @@ const Write = () => {
           onChange={handleData}
           name="letter"
         ></textarea>
+
 
         <button className="button" onClick={submit}>보내기</button>
       </div>

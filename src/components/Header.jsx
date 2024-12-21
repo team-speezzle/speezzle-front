@@ -1,5 +1,6 @@
 import "../styles/header.css";
 import back_icon from "../assets/back_icon.svg";
+
 import { useNavigate } from "react-router-dom";
 
 const Header = ({ title }) => {

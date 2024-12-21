@@ -18,11 +18,9 @@
 }
 
 .share {
-  padding: 0 2% 0 2%;
   display: flex;
   width: 90%;
   height: 40px;
-  justify-content: space-between;
   background-color: #fff;
   font-size: 20px;
   border-radius: 8px;

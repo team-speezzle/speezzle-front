@@ -1,0 +1,18 @@
+<svg width="97" height="82" viewBox="0 0 97 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i_6877_1106)">
+<path d="M19.2798 30.1048C18.7271 17.8634 17.537 4.88815 17.1752 1.0979C17.119 0.509013 17.5819 0 18.1735 0H89C93.4183 0 97 3.58172 97 8V81.9987C97 81.9994 96.9994 81.9999 96.9988 81.9999V81.9999C96.8555 81.9851 84.3024 80.6906 71.4074 79.9474C69.9628 79.8642 69.2805 78.012 69.8938 76.6676C70.1896 76.0189 70.3562 75.3726 70.3562 74.7396C70.3562 69.0787 64.3918 64.4896 57.0343 64.4896C49.6769 64.4896 43.7124 69.0787 43.7124 74.7396C43.7124 75.3574 43.8711 75.9878 44.1538 76.6208C44.7558 77.9689 44.0715 79.8178 42.6283 79.9006C32.1333 80.5024 21.7632 81.5182 18.2892 81.8731C17.6577 81.9376 17.1275 81.4142 17.1879 80.7823C17.5663 76.8265 18.7527 63.896 19.2934 51.8686C19.3715 50.1326 17.06 49.3713 15.9517 50.6856C14.063 52.9252 11.9612 54.6667 9.99142 54.6667C4.47331 54.6667 0 48.5479 0 41C0 33.4521 4.47331 27.3333 9.99142 27.3333C11.9547 27.3333 14.0491 29.0633 15.933 31.2922C17.0432 32.6059 19.3582 31.8416 19.2798 30.1048Z" fill="#131111" fill-opacity="0.1"/>
+</g>
+<path d="M96.8755 81.9873C96.8754 81.9872 96.8752 81.9872 96.875 81.9872V81.8615C96.9384 81.868 96.9804 81.8723 97 81.8743V81.8749C96.9357 81.8742 96.8814 81.9232 96.8755 81.9873Z" stroke="#ABABAB" stroke-width="0.25"/>
+<defs>
+<filter id="filter0_i_6877_1106" x="-1" y="-1" width="98" height="82.9999" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-1" dy="-1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.95 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_6877_1106"/>
+</filter>
+</defs>
+</svg>
