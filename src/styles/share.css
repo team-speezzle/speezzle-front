@@ -24,7 +24,7 @@
 .puzzlelayout {
   position: relative;
   width: 320px;
-  height: 280px;
+  height: 240px;
   background-size: cover;
 }
 
@@ -85,43 +85,43 @@ img {
   opacity: 0.3;
 }
 .img8 {
-  top: 20px;
-  left: 258px;
+  top: 65px;
+  left: 224px;
   width: 97px;
   height: 102px;
   opacity: 0.3;
 }
 
 .img9 {
-  top: 414px;
-  left: 35px;
+  top: 160px;
+  left: 0px;
   width: 97px;
   height: 84px;
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 .img10 {
-  top: 399px;
-  left: 113px;
+  top: 145px;
+  left: 78px;
   width: 99px;
   height: 100px;
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 .img11 {
-  top: 414px;
-  left: 192px;
+  top: 160px;
+  left: 160px;
   width: 99px;
   height: 85px;
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 .img12 {
-  top: 399px;
-  left: 275px;
+  top: 145px;
+  left: 240px;
   width: 80px;
   height: 100px;
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 .button_1 {
